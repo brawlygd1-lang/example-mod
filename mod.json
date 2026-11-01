@@ -6,13 +6,14 @@
 	},
 	"id": "brawlygd1-lang.predictbuffer",
 	"name": "Predict Buffer",
-	"version": "v1.0.0",
+	"version": "v2.0.0",
 	"developer": "brawlygd1-lang",
-	"description": "Retiene 1-2 frames el click si la trayectoria apunta a un hazard (test).",
+	"description": "Retrasa tu click los pasos justos para no morir, usando simulacion real.",
 	"settings": {
 		"enabled": { "type": "bool", "name": "Activado", "default": true },
-		"max-delay": { "type": "int", "name": "Retraso máximo (frames)", "default": 2, "min": 0, "max": 6 },
-		"lookahead": { "type": "int", "name": "Frames a predecir", "default": 4, "min": 1, "max": 20 },
-		"reach": { "type": "int", "name": "Alcance del salto (px)", "default": 60, "min": 0, "max": 300 }
+		"max-delay": { "type": "int", "name": "Retraso maximo (pasos de fisica)", "description": "4 pasos = 1 frame a 60 fps", "default": 8, "min": 0, "max": 60 },
+		"horizon": { "type": "int", "name": "Pasos a simular", "default": 48, "min": 4, "max": 240 },
+		"hold-ticks": { "type": "int", "name": "Duracion simulada del click (pasos)", "default": 12, "min": 1, "max": 120 },
+		"debug": { "type": "bool", "name": "Mostrar aviso al retrasar", "default": true }
 	}
 }
