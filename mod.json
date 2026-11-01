@@ -1,28 +1,18 @@
 {
-	"geode": "5.0.0",
+	"geode": "5.11.2",
 	"gd": {
-		"win": "2.2081",
 		"android": "2.2081",
-		"mac": "2.2081",
-		"ios": "2.2081"
+		"win": "2.2081"
 	},
-	"id": "brawlygd1-lang.clickdelay",
-	"name": "Click Delay",
+	"id": "brawlygd1-lang.predictbuffer",
+	"name": "Predict Buffer",
 	"version": "v1.0.0",
 	"developer": "brawlygd1-lang",
-	"description": "Retrasa los clicks X frames y los cuenta (test).",
+	"description": "Retiene 1-2 frames el click si la trayectoria apunta a un hazard (test).",
 	"settings": {
-		"enabled": {
-			"type": "bool",
-			"name": "Activado",
-			"default": true
-		},
-		"delay-frames": {
-			"type": "int",
-			"name": "Retraso (frames)",
-			"default": 2,
-			"min": 0,
-			"max": 30
-		}
+		"enabled": { "type": "bool", "name": "Activado", "default": true },
+		"max-delay": { "type": "int", "name": "Retraso máximo (frames)", "default": 2, "min": 0, "max": 6 },
+		"lookahead": { "type": "int", "name": "Frames a predecir", "default": 4, "min": 1, "max": 20 },
+		"reach": { "type": "int", "name": "Alcance del salto (px)", "default": 60, "min": 0, "max": 300 }
 	}
 }
