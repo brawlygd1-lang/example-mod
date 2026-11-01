@@ -68,6 +68,6 @@ class $modify(BufferLayer, GJBaseGameLayer) {
             }
         }
         m_fields->replaying = false;
-        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTic);
+        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
     }
 };
