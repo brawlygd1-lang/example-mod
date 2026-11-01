@@ -44,7 +44,7 @@ class $modify(BufferLayer, GJBaseGameLayer) {
         m_fields->queue.push_back({down, button, isP1, 0});
     }
 
-    void processCommands(float dt) {
+    void processCommands(float dt, bool isHalfTick, bool isLastTick) {
         auto mod = Mod::get();
         int maxDelay = (int)mod->getSettingValue<int64_t>("max-delay");
         PlayerObject* ps[2] = {m_player1, m_player2};
@@ -68,6 +68,4 @@ class $modify(BufferLayer, GJBaseGameLayer) {
             }
         }
         m_fields->replaying = false;
-        GJBaseGameLayer::processCommands(dt);
-    }
-};
+        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTic
